@@ -12,10 +12,14 @@ project "jsoncpp"
 		"src/**.dict"
 	}
 	
+	includedirs {
+		"include"
+	}
+	
 	filter "system:windows"
 	systemversion "latest"
 	cppdialect "C++17"
 	staticruntime "On"
 	
-	filter { "system:windows", "configuration:Release" }
+	filter { "system:windows", "configurations:Release" }
 		buildoptions "/MT"
